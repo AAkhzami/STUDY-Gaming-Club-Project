@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gbPCTable = new System.Windows.Forms.GroupBox();
+            this.pbOptions = new System.Windows.Forms.PictureBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.btnEnd = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblPlayerName = new System.Windows.Forms.Label();
-            this.PlayTimer = new System.Windows.Forms.Timer(this.components);
-            this.pbOptions = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PlayTimer = new System.Windows.Forms.Timer(this.components);
             this.gbPCTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +59,17 @@
             this.gbPCTable.TabIndex = 0;
             this.gbPCTable.TabStop = false;
             this.gbPCTable.Text = "PC";
+            // 
+            // pbOptions
+            // 
+            this.pbOptions.Image = global::Gaming_Club_Project.Properties.Resources.option;
+            this.pbOptions.Location = new System.Drawing.Point(314, 25);
+            this.pbOptions.Name = "pbOptions";
+            this.pbOptions.Size = new System.Drawing.Size(18, 18);
+            this.pbOptions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbOptions.TabIndex = 7;
+            this.pbOptions.TabStop = false;
+            this.pbOptions.Click += new System.EventHandler(this.pbOptions_Click);
             // 
             // lblTime
             // 
@@ -111,21 +122,6 @@
             this.lblPlayerName.Text = "Player";
             this.lblPlayerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PlayTimer
-            // 
-            this.PlayTimer.Interval = 10;
-            this.PlayTimer.Tick += new System.EventHandler(this.PlayTimer_Tick);
-            // 
-            // pbOptions
-            // 
-            this.pbOptions.Image = global::Gaming_Club_Project.Properties.Resources.option;
-            this.pbOptions.Location = new System.Drawing.Point(314, 25);
-            this.pbOptions.Name = "pbOptions";
-            this.pbOptions.Size = new System.Drawing.Size(18, 18);
-            this.pbOptions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbOptions.TabIndex = 7;
-            this.pbOptions.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Gaming_Club_Project.Properties.Resources.computer_game;
@@ -135,6 +131,11 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // PlayTimer
+            // 
+            this.PlayTimer.Interval = 10;
+            this.PlayTimer.Tick += new System.EventHandler(this.PlayTimer_Tick);
             // 
             // ctrlComputerGaming
             // 

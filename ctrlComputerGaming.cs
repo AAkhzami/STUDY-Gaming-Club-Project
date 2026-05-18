@@ -22,7 +22,7 @@ namespace Gaming_Club_Project
         double _TimeInHours = 0;
         string _PlayerName = "Player";
         string _TableTitle = "Computer Gaming";
-        float _PricePerHour = .5f;
+        float _PricePerHour = 5f;
         float _TotalFees = 0;
 
 
@@ -134,6 +134,19 @@ namespace Gaming_Club_Project
                 RaiseTableCompleted(); Reset();
             }
 
+        }
+        public void UpdateOptions(string playerName, string tableTitle, float pricePerHour)
+        {
+            PlayerName = playerName;
+            TableTitle = tableTitle;
+            PricePerHour = pricePerHour;
+        }
+        private void pbOptions_Click(object sender, EventArgs e)
+        {
+            frmOptions frm = new frmOptions();
+            frm.OptionsUpdated += UpdateOptions;
+            frm.ShowDialog();
+            
         }
     }
 }

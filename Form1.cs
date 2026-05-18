@@ -21,5 +21,11 @@ namespace Gaming_Club_Project
         {
             MessageBox.Show($"Table completed! Time: {e.TimeText}, Price per hour: {e.PricePerHour:C}, Total fees: {e.TotalFees:C}");
         }
+        private void OnPlayerFinished(object sender, ctrlComputerGaming.TableCompletedEventArgs e)
+        {
+            ctrlComputerGaming gamingControl = sender as ctrlComputerGaming;
+            ;
+            MessageBox.Show($"Player : {gamingControl.PlayerName} on Table {gamingControl.TableTitle} has finished playing ! Time: {e.TimeText}, Price per hour: {e.PricePerHour:C}, Total fees: {e.TotalFees:C}");
+        }
     }
 }
