@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gaming_Club_Project
 {
-    public partial class frmOption : Form
+    public partial class Options : Form
     {
-        public frmOption()
+        public Options()
         {
             InitializeComponent();
         }
